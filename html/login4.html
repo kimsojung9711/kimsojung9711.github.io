@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/basic.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+          const modalBox = document.querySelector("#modalBox");
+          const open = document.querySelector("#open");
+          const close = document.querySelector("#close");
+    
+          //방법1
+          open.addEventListener("click", function(){
+            //modalBox.classList.add("active");
+            modalBox.classList.toggle("active");
+          });
+    
+          close.addEventListener("click", function(){
+             //modalBox.classList.remove("active");
+             modalBox.classList.toggle("active");
+          });
+    
+        });
+    </script>
+</head>
+
+<body>
+    
+        <div class="header">
+            <h1>Login</h1>
+        </div>
+
+        <button id="open">로그인하기</button>
+        <div id="modalBox">
+            <div class="login1">
+                <button id="close">&times;</button>      
+                <form class="logBox" action="" method="post" name="login">
+                    <div class="loid">
+                        <!-- <img class="loginiconid" src="../img/yellow-icon-login.png" alt="로그인이미지" > -->
+                        <input class="lo1" type="text" name="mname" placeholder="아이디를 입력하세요." onfocus="this.placeholder=''" onblur="this.placeholder = '아이디를 입력하세요'" requirde ><br>
+                    </div>
+                    <div class="lopw">
+                        <!-- <img class="loginiconpw" src="../img/yellow-icon-pw.png" alt="비밀번호 이미지"> -->
+                        <input class="lo2" type="password" name="password" placeholder="비밀번호를 입력하세요." onfocus="this.placeholder=''" onblur="this.placeholder = '비밀번호를 입력하세요'">
+                    </div>
+                    
+                </form>
+                <button class="lobt">로그인</button>
+                <div class="user">
+                    <a href="#" class="newUser">아이디 찾기</a>
+                    <a href="#" class="findId"> 비밀번호 찾기</a>
+                    <a href="#" class="findPw"> 회원가입</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+   
+</body>
+</html>

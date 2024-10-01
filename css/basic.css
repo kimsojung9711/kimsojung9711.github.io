@@ -1,0 +1,502 @@
+/* basic css 시작 */
+*{ 
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  margin: 10px auto;
+  padding: 5px;
+  width: 980px;
+  height: 370px;
+}
+
+main{
+  margin: 0 auto;
+  padding: 20px 0 20px 0; /* top right bottom left */
+  width: 980px;
+  height: auto;
+}
+
+body{
+  margin: 10px auto;
+  padding: 5px;
+  width: 980px;
+  height: auto;
+}
+
+footer{
+	margin: 30px auto;	
+	padding: 20px;
+	width: 980px;
+	height: auto;
+}
+
+li, ol, ul{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+/* basic css 끝 */
+/* index css 시작 */
+
+/* header 시작 */
+.headContainer{
+  width: 100%;
+}
+.headerTop{
+  display: flex;
+  background-color: #ffca43c0;
+  width: 980px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.headerNav{
+  display: flex;
+  float: right;
+  margin: 0 auto;
+  width: 500px;
+  justify-content: center;
+  text-align: center;
+  padding-top: 23px ;
+}
+.headerInner{
+  display: flex;
+  width: 250px;
+  text-align: right;
+}
+
+.headerNav>li a{
+  text-decoration: none;
+  color: black;
+  font-size: 12pt;
+  font-weight: 700;
+  padding: 0px 15px; 
+  text-shadow: 2px 2px 2px #ccc;  
+}
+
+.headerNav>li a:hover{
+  color: #ccc;
+}
+
+.headerInner>li a{
+  text-decoration: none;
+  color: #555;
+  padding: 0px 8px;
+}
+.headerInner>li a:hover{
+  color: blue;
+}
+.headerBox{
+  background-image: url(../img/handshakedogfemale.jpg);
+  width: 980px;
+  height: 300px;
+  opacity: 0.9;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.headerBGI{
+  width: 500px;
+  height: 300px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.headerBGIText{
+  margin: 0px auto;
+  padding-top: 50px;
+  color: white;
+  text-shadow: 2px 2px 2px #555;
+  text-align: center;
+}
+.text0{
+  font-size: 16pt;
+}
+.text1{
+  font-size: 26pt;
+}
+/* header 끝 main 시작 */
+.bodyTop{
+  display: flex;
+  justify-content: center;
+  width: 980px;
+  height: 70px;
+}
+.bodyRadio{
+  display: flex;
+}
+.bodyRadio>li {
+  padding: 20px 10px;
+  width: 80px;
+}
+.bodySearch{
+  display: flex;
+  justify-content: center;
+  width: 500px;
+}
+.bodySearch> input{
+  width: 480px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin-top: 10px;
+}
+.balbadack{
+  width: 80px;
+}
+.balbadack> input{
+  width: 40px;
+  margin-top: 10px;
+}
+.balbadack> input:hover{
+  background-color: #ffca43c0;
+  border: 3px solid #ffca43c0;
+  border-radius: 20px;
+}
+
+/* main 끝 body 시작 */
+.bodyInner{
+  display: flex;
+}
+.bodyLeft{
+  width: 300px;
+  height: auto;
+}
+.bodyIMG{
+  width: 680px;
+  height: auto;
+}
+
+.bodyLeftbox{
+
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.bodyLeftbox> a{
+  text-decoration: none;
+  width: 260px;
+  font-size: 36px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 20px 0px;
+  margin: 15px auto;
+  color: black;
+}
+.bodyLeftbox img{
+  width: 260px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.dogBox {
+  width: 680px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+.dogpicture {
+  background-color: rgba(0, 255, 255, 0.329);
+  display: flex; /* 플렉스박스 사용 */
+  align-items: center; /* 수직 정렬 */
+  width: 330px;
+  height: 450px;
+  flex-direction: column;
+  border-radius: 30px;
+  margin: 10px auto;
+}
+.dogpicture img{
+  margin-top: 10px;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+
+}
+.dogPtext {
+  background-color: #fcfcfcfd;
+  
+  border-radius: 10px;
+  width: 280px;
+  display: flex;
+}
+.dogPtext> span{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+/* body 끝 footer 시작 */
+.footerContainer {
+  width: 980px;
+  margin: 0 auto;
+  
+}
+
+.footerBox{
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.footerContent {
+  text-align: center;
+  width: 280px;
+  background-color: #75c1e3;
+}
+.footerContent> img{
+  width: 50px;
+}
+.footerInfo{
+  text-align: center;
+  background-color: #ccc;
+}
+.infoText {
+  display: flex;
+  padding: 6px 12px;
+   
+}
+.infoText> li{
+  margin: 0 auto;
+  text-align: center;
+}
+.infoText>li a{
+  padding: 0px 10px;
+  text-decoration: none;
+}
+/* footer 끝 */
+
+/* 주하님 noticeboard css 작성부분 */
+.noticeboardMather{
+  display: flex;
+  margin: 0px auto;
+  width: 980px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 980px;
+  margin: 0px auto; /* 위아래 여백 추가 */
+  gap: 5px;
+  
+}
+.noticeBox{
+  display: flex;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.tableTest{
+  max-width: 980px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-left: none;
+  border-right: none;
+}
+.tableTest a{
+  color: black;
+  text-decoration: none;
+}
+
+
+th, td {
+border-top: 1px solid black;
+border-bottom: 1px solid black;
+border-left: none;
+border-right: none;
+}
+.left{
+text-align: left;
+}
+.btu a:hover{background-color: #FFF1CC; color: #FFF1CC;}
+
+a:visited{color: black;}
+/* 주하님 css noticeboard 끝 membership 시작 */
+.box{
+  text-align: center;
+ 
+
+}
+.minibox{
+  text-align: left;
+  margin-left: 90px;
+}
+form{
+  text-align: left;
+  margin-left: 90px;
+  margin-bottom: 30px;
+}
+
+.bta :hover{
+  background-color: #FFF1CC;
+}
+/* 주하님 membership 작성부분 끝 */
+/* membership 병합시도 css */
+.membershipMather{
+  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;  
+  background-color: #FFF1CC;
+  border-radius: 20px;
+}
+/* membership 병합성공 */
+/* 소정님 login css 작성부분 */
+#modalBox{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;  /* 자바스크립트 활용 */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#modalBox.active{
+  display: flex;
+}
+
+.login1{
+  width: 220px;
+  height: 30px;
+  padding: 100px 150px;
+  background-color: #fff;
+  /* border-radius: 5px; */
+  /* border: 0px solid rgba(0, 0, 0, 0.3); */
+  display: flex;
+  position: fixed;
+  align-items: center;
+  /* position: relative; */
+}
+
+.loginiconid{
+  width: 30px;
+  height: 30px;
+  background-size: 27px;
+  padding-left: 40px;
+}
+
+.loginiconpw{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 280px;
+  top: 6px;
+}
+
+.loid{
+  position: absolute;
+  top: 50px;
+  width: 30px;
+  height: 30px;
+  
+  left: 120px;
+  
+}
+.lopw{
+  position: absolute;
+  top: 110px;
+  right: 163px;
+}
+
+#close{
+  background-color: white;
+  border: 0;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 25px;
+}
+
+.lo1 {
+  width: 300px;
+  height: 30px;
+  padding:5px;
+  margin-left: -100px;           
+  background: url(../img/yellow-icon-login.png)no-repeat 5px center;
+  background-size: 22px;
+  background-color: #fff;
+  padding-left: 30px;
+  border: 1px solid grey;
+  border-radius: 5px;                       
+}
+
+.lo2 {
+  width: 300px;
+  height: 30px;
+  padding:5px;
+  margin-left: -100px;
+  background: url(../img/yellow-icon-pw.png)no-repeat 5px center;
+  background-size: 20px;
+  background-color: #fff;
+  padding-left: 30px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.lobt{
+  width: 100px;
+  height: 80px;
+  padding: 10px 10px;
+  margin-left: 40px;
+  border: 1px solid gray;
+  border-radius: 7px;
+  left: 350px;
+  top: 65px;
+  position: absolute;
+}
+
+.lobt:hover{
+  background-color: #FFF1CC;
+  border: 1px solid gray;
+  border-radius: 7px;
+}
+
+.user{
+  display: flex;
+   margin: 150px -30px 0px -30px;
+  
+  /* justify-content: space-evenly; */
+}
+
+.user a{
+  text-decoration:underline;
+  color: rgb(105, 103, 103);
+  font-size: 13px;
+  float:left;
+  margin-right: 5px;
+  width: 100px;
+}
+
+.user a:hover{
+ color: #baa56b;
+}
+
+.user a::before{
+  content: '|';
+ }
+
+.user a:first-child::before{
+  content: '';
+}
+/* 소정님 login css 끝 */
+
+

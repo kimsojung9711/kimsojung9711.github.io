@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>소정한 유기견</title>
+    <link rel="stylesheet" href="../css/basic.css" type="text/css" />
+    <link rel="icon" href="../img/Dog_face_png.png" type="image/x-icon"/>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+       document.addEventListener("DOMContentLoaded",function(){
+          const zipbtn = document.querySelector("#zipbtn");  
+          const zipcode = document.querySelector("#post"); 
+          const address1 = document.querySelector("#address1");  
+          const address2 = document.querySelector("#address2");  
+    
+          zipbtn.addEventListener("click", function(){
+             new daum.Postcode({
+                  oncomplete: function(data) {  
+                        zipcode.value = data.zonecode;  
+    
+                        let fullAddress=""; 
+                        let extendAddress=""; 
+    
+                    
+                      if(data.userSelectedType==="R"){ 
+                        fullAddress = data.roadAddress;
+                      }else{ 
+                        fullAddress = data.jibunAddress;
+                      }
+                   
+                    
+                      if(data.userSelectedType === "R"){
+                        if(data.bname !==""){ 
+                          extendAddress += data.bname;  
+                        }
+                        if(data.buildingName !== ""){ 
+                         extendAddress += (extendAddress !=="")? (", " + data.buildingName) : data.buildingName;
+                        
+                         }
+    
+                      fullAddress +=((extendAddress !=="")? "(" + extendAddress + ")" : "");  
+                     }
+                   
+                    document.membership.address1.value=fullAddress;
+                   
+                      address2.focus();     
+                     }
+           }).open();
+          });
+       });  
+    
+       
+    </script>
+    
+  </head>
+
+  <body>
+    
+  
+    <!-- 헤더 부분 --> <!-- 파스텔 옐로우 -->
+    <header> <!-- 헤드컨테이너 -->
+      <div class="headContainer">
+            <div class="headerTop"> <!-- 백그라운드 파스텔 옐로 / 투명도주기 -->
+                  <div class="logo"> <!-- 헤더로고 -->
+                       <a href="../html/index.html" target="_blank"><img src="../img/HappyDogLogo3.png" alt="해피독로고3"></a>
+                  </div> 
+  
+  
+                  <div class="headerNav"><!-- 헤더내비 -->
+                    
+                      <li><a href="#">입양케어센터</a></li>
+                      <li><a href="#">절차 및 관리</a></li>
+                      <li><a href="../html/noticeboard.html">안심입양</a></li>
+                      <li><a href="#">우리아가쇼핑몰</a></li>
+                    
+                  </div>
+  
+  
+                  <div class="headerInner"><!-- 헤더이너 -->
+                    <li><a href="../html/login4.html">로그인</a></li>
+                    <li><a href="../html/membership.html">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                  </div>
+                </div>
+              
+            <div class="headerBox">
+                    <!-- 백그라운드 이미지 1200:300 -->
+                 <div class="headerBGI">
+                    <!-- 헤더중간 텍스트 -->
+                        <div class="headerBGIText">
+                            <span class="text0">"너와 계속 함께 하지 못해 미안해..."</span><br>
+                            <span class="text1">그 "애틋함"을 담아 <br>
+                            저희 소정한에서 <br>함께 해드립니다.</span>
+                        </div>
+                 </div>
+             </div>
+        </div>
+    </header>
+    
+    <!-- 헤더--------------------------------------------종료 -->
+    <!-- 바디 콘테이너 시작 --------------------------------- -->
+<main>
+  <div class="membershipMather">
+    <h3>회원가입</h3><hr>
+
+    <h6>가입약관(선택)</h6><hr>
+        <div class="box">
+        <textarea name="" cols="80" rows="10"> 싱글슈머(singlesumer.com)는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+
+        - 서비스 제공에 관한 계약 이행
+
+        - 회원 관리
+
+        - 회원제 서비스 이용에 따른 본인확인, 개인 식별, 불량회원의 부정 이용 방지와 비인가 사용방지, 연령 확인
+
+        ◼ 개인정보의 보유 및 이용기간
+
+        싱글슈머(singlesumer.com)는 개인정보 수집 및 이용목적이 달성된 후에는 파기하나, 중복 가입 방지나 악성 가입자를
+        허용하지 않기 위해 닉네임 및 이메일 주소를 3년간 보존할 수 있습니다.</textarea><br>
+        
+        
+        <div class="minibox"><input type="checkbox" name="agree" value="a"> 위의 내용을 모두 읽었으며 동의합니다.</div><br><br>
+    </div>
+
+        
+        <form action="" method="post" name="membership">
+            아이디 : <input type="text" name="member_name" required>&nbsp;<button type="button" class="btu">중복체크</button><br><br>
+        비밀번호 : <input type="password" name="pwd1"><label for="passw">&nbsp;비밀번호는 6자리 이상이어야 하며 영문과 숫자를 반드시 포함해야 합니다</label>
+                                                    <label for="password" id="passw" name="pwd2"></label><br><br>
+        비밀번호 확인: <input type="password" name="pwd2"><br><br>
+        이메일: <input type="email" name="email"><br><br>
+        
+        <label for="post">우편번호 :</label> 
+        <button type="button" class="btu" id="zipbtn">우편번호 </button>
+        <input type="text" class="input1 ipost" name="zipcode" id="post"><br><br>
+        <label for="address1">주소 :</label> 
+        <input type="text" class="input1 iaddress" name="address1" id="address1" readonly style="text-align: left; width: 400px;"><br><br>
+        
+       
+        <label for="address2">상세주소 :</label> 
+        <input type="text" class="input1 iaddress" name="address2" id="address2"><br><br>
+
+        닉네임 : <input type="nick" name="nickname"><br><br>
+        메일링 가입:&nbsp; <input type="radio" name="anser" value="y"> 예&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="anser" value="n"> 아니요<br><br>
+        쪽지 허용:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="all" value="a"> 모두 허용&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="all" value="b"> 등록된 친구들만 허용&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="all" value="c"> 모두 금지<br><br>
+                <button type="button" class="btu" id="create">회원가입</button>
+
+            </form>
+  </div>
+</main>
+<!-- 바디 부분 종료 ------------------------------------ -->
+ <!-- 푸터 시작 ---------------------------------------- -->
+ <footer class="footerContainer">
+  <div class="footerBox">
+    <!-- 1번 박스 -->
+    <div class="footerContent">
+      <img src="../img/analog_time.png" alt="시계아이콘" style="width: 80px;">
+      <h3 style="font-size: 16pt;">운영시간 안내</h3>
+      <div class="ftText">평일9:00~18:00(주말·공휴일 휴무) <br>
+        입양상담(사전예약제) 평일 10:00~16:00 <br>
+        주말·공휴일 10:00~15:00</div>
+    </div>
+    <!-- 2번 박스 -->
+    <div class="footerContent">
+      <img src="../img/headset.png" alt="헤드셋 아이콘">
+      <h3 style="font-size: 16pt;">문의전화</h3>
+      <div class="ftText">031 - 123 - 3456 <br>
+        * 점심시간, 주말은 전화상담을 받지 않습니다. <br>
+        * 점심시간 12:00~13:00</div>
+    </div>
+    <!-- 3번 박스 -->
+    <div class="footerContent">
+      <img src="../img/here_load.png" alt="맵핀 아이콘">
+      <h3 style="font-size: 16pt;">찾아오시는 길</h3>
+      <div class="ftText">경기도 용인시 처인구 중부대로 1074-1 <br>
+        용인시동물보호센터</div>
+    </div>
+  </div>
+  <!-- 푸터 인포 -->
+  <div class="footerInfo">
+    <ul class="infoText">
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">저작권정책</a></li>
+      <li><a href="#">이메일주소무단수집거부</a></li>
+      <li><a href="#">사이트맵</a></li>
+      <li><a href="#">찾아오시는길</a></li>
+    </ul>
+    [17019] 경기도 용인시 처인구 중부대로 1199(삼가동) | 대표번호 : 031-6193-2114 <br>
+COPYRIGHT(C) YONGIN CITY. ALL RIGHTS RESERVED.
+  </div>
+</footer>
+</body>
+
+
+ 
+</html>
